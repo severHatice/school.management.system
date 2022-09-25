@@ -3,8 +3,8 @@ import java.util.List;
 public class School {
     private List<Teacher> teacher;
     private List<Student> student;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int  totalMoneyEarned;
+    private static int totalMoneySpent;
 
     public School(List<Teacher> teacher, List<Student> student) {
         this.teacher = teacher;
@@ -33,8 +33,8 @@ public class School {
         return totalMoneyEarned;
     }
 
-    public void setTotalMoneyEarned(int moneyEarned) {
-       totalMoneyEarned+= totalMoneyEarned;
+    public static void updateTotalMoneyEarned(int moneyEarned) {
+       totalMoneyEarned+= moneyEarned;
 
     }
 
@@ -42,7 +42,7 @@ public class School {
         return totalMoneySpent;
     }
 
-    public void setTotalMoneySpent(int MoneySpent) {
+    public static void updateTotalMoneySpent(int MoneySpent) {
        totalMoneySpent = totalMoneySpent-totalMoneySpent;
     }
 }
